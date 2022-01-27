@@ -12,6 +12,17 @@ pipeline {
                 bat "fam.bat"
             }
         }
+        stage('Python') {
+            steps {
+                bat "sam.py"
+            }
+        }
+        stage('Batch') {
+            steps {
+                bat "fam.bat"
+            }
+        }
+        
         
     }
 }
