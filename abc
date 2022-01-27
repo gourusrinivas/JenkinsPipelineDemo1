@@ -2,25 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Plan') {
+        stage('Python') {
             steps {
-                echo 'Plan'
+                bat "sam.py"
             }
         }
-        stage('Build') {
+        stage('Batch') {
             steps {
-                echo 'Build'
+                bat "fam.bat"
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploy'
-            }
-        }
+        
     }
 }
